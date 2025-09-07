@@ -12,6 +12,10 @@
     font-family: "Bogart Trial",serif;
 }
 
+h3{
+    margin:5px;
+}
+
 
 div{
     /*border: 2px solid black;*/
@@ -22,14 +26,53 @@ div{
     grid-template-columns: 1fr 3fr;
 }
 
+ul{
+    list-style: none;
+}
+
+
 /* ----------------------------- Sidebar  board     --------------------------*/
 
 
 .sidebar-container{
+    background-color: #1992d4;
+    color: white;
     grid-row: 1/3;
     display: grid;
     gap:20px;
-    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-rows: 0.5fr 3fr 2fr;
+}
+
+#title-sidebar-icon{
+
+    width: 60px;
+    height: 60px;
+    filter: invert();
+    
+
+}
+
+img[src*="img/icons/sidebar/"]{
+    align-self: center;
+    filter: invert();
+}
+
+.title-sidebar{
+
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+li > p{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+li{
+
+  display: flex;
+  margin: 10px;
 }
 
 /* ----------------------------- Header Container   --------------------------*/
@@ -62,12 +105,14 @@ div{
 /* ----------------------------- Main Content Container --------------------------*/
 
 .main-content-container{
+    padding-top: 50px;
+    background-color: #e2e8f0;
     grid-column: 2/3;
     display: grid;
     gap:20px;
     grid-template-columns: 2fr 1fr;
-    
 }
+
 
 .your-projects-container{
 
@@ -76,30 +121,31 @@ div{
     grid-row:1/3;
     display: grid;
     gap:10px;
-    grid-template-rows: 1fr 9fr;
+    grid-template-rows: 0.5fr 9fr;
     padding: 20px;
    
 }
 
 .cards-container{
 
-    border-style: none;
+    
     grid-row: 2/3;
     display: grid;
     gap:20px;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    height: 200px;
     
 
 }
 
 .project-card{
+
+    Border-style: solid;
     background-color: white;
-    
     border-radius: 3%;
     border-color: white white white rgb(233, 187, 60);
     border-left-width: 5px;
     box-shadow: 1px 1px 1em grey;
-
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -114,7 +160,6 @@ img[src*="img/icons"]{
 
     margin-top: auto;
     margin-bottom: 20px;
-    border-style: none;
     display:flex;
     justify-content: end;
     gap:20px;
@@ -122,15 +167,17 @@ img[src*="img/icons"]{
 
 }
 
+/* ----------------------------- announcements Container --------------------------*/
+
 .announcements-container{
 
-    background-color: #e2e8f0;
+    /*background-color: #e2e8f0;*/
     grid-column: 2/3;
     padding: 20px;
-    border-style:none;
 }
 
-.announcements-card{
+.announcements-card,
+.trending-card{
 
     background-color: white;
     border-style: solid;
@@ -139,6 +186,7 @@ img[src*="img/icons"]{
     border-radius: 3%;
     box-shadow: 1px 1px 1em grey;
     padding: 10px;
+    
 
 }
 
@@ -153,9 +201,13 @@ img[src*="img/icons"]{
     border-bottom-color: white;
 }
 
+/* ----------------------------- trendings Container --------------------------*/
+
 .trending-container{
+    /*background-color: #e2e8f0;*/
     grid-column: 2/3;
     grid-row: 2/3;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -166,5 +218,6 @@ img[src*="img/avatar"]{
 }
 
 .trending-item{
-    
+    display: flex;
+    justify-content: space-evenly;
 }
