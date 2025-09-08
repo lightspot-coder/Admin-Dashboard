@@ -30,6 +30,16 @@ ul{
     list-style: none;
 }
 
+img[src*="img/avatar"]{
+    width:50px;
+    height: 50px;
+}
+
+img[src*="img/icons/sidebar/"]{
+    align-self: center;
+    filter: invert();
+}
+
 
 /* ----------------------------- Sidebar  board     --------------------------*/
 
@@ -50,11 +60,6 @@ ul{
     filter: invert();
     
 
-}
-
-img[src*="img/icons/sidebar/"]{
-    align-self: center;
-    filter: invert();
 }
 
 .title-sidebar{
@@ -82,24 +87,90 @@ li{
     display: grid;
     gap:10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2,90px);
+    align-items: stretch;
 }
 
 .search-bar{
     grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search-bar > img{
+    width: 50px;
+}
+
+#site-search{
+    width:90%;
+    border-radius: 30px;
+    border-style: none;
+    background-color:#e2e8f0;
+}
+
+.user-name > img{
+    width: 75px;
+    height: 75px;
 }
 
 .user-name{
+    
     grid-row:2/3;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 20px;
+    
 }
+
+.user-greeting{
+    font-weight: bold;
+}
+.user-greeting > p:first-child{
+    font-size: smaller;
+}
+.user-greeting > p:last-child{
+    font-size: larger;
+}
+
+.user-greeting:first-child{
+    font-size: small;
+}
+
 
 .bell-user-online{
     grid-column: 2/3;
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bell-user-online > p{
+    font-weight:bold;
 }
 
 .header-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:30px;
     grid-row: 2/3;
     grid-column: 2/3;
+}
+
+.header-nav > button{
+    
+    border-style: none;
+    background-color: #1992d4;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 40px;
+    font-size:medium;
+    font-weight: bold;
+    block-size: 40px;
 }
 
 /* ----------------------------- Main Content Container --------------------------*/
@@ -210,11 +281,6 @@ img[src*="img/icons"]{
     padding: 20px;
     display: flex;
     flex-direction: column;
-}
-
-img[src*="img/avatar"]{
-    width:75px;
-    height: 75px;
 }
 
 .trending-item{
